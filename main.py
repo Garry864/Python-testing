@@ -20,7 +20,7 @@ def data_query_and_email(df):
     for _, row in df.iterrows():
         if (present >= row["reminder_date"].date()) and (row["has_paid"] == "no"):
             send_email(
-                subject = f"[Coding is fun] Invoice: {row["invoice_no"]}",
+                subject = f"[Coding is fun] Invoice: {row['invoice_no']}",
                 reciever_mail = row["email"],
                 name = row["name"],
                 due_date = row["due_date"].strftime("%d, %nb, %Y"), # example: 11, Aug 2022

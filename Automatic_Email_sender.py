@@ -2,7 +2,7 @@ import os
 import smtplib
 from email.message import EmailMessage
 from email.utils import formataddr
-from pathlib import Path
+# from pathlib import Path
 
 # from dotenv import load_dotenv # pip install python-dotenv
 
@@ -15,13 +15,13 @@ EMAIL_SERVER = "smtp.gmail.com"
 # load_dotenv(envars)
 
 # Read the enviorment variables
-# sender_email = os.getenv("EMAIL")
-# password_email = os.getenv("PASSWORD")
+sender_email = os.getenv("EMAIL")
+password_email = os.getenv("PASSWORD")
 
 # Authentic_id
 
-sender_email = "aaravsingh86451@gmail.com"
-password_email = "qfqo qrlp azvw btnt"
+# sender_email = "aaravsingh86451@gmail.com"
+# password_email = "qfqo qrlp azvw btnt"
 
 def send_email(subject, reciever_mail, name, due_date, invoice_no, amount):
     # Create the base text message
